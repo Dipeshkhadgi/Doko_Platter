@@ -1,1 +1,0 @@
-# doko_platter
