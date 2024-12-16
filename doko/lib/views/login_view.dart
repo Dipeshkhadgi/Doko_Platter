@@ -7,7 +7,10 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login')),
+      appBar: AppBar(
+        title: Text('Login'),
+        backgroundColor: const Color.fromARGB(255, 244, 127, 54),
+      ),
       body: Center(
         child: Container(
           width: 350,
@@ -67,7 +70,17 @@ class LoginView extends StatelessWidget {
                     );
                   }
                 },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 244, 127, 54),
+                ),
                 child: Text('Login'),
+              ),
+              SizedBox(height: 10),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/signup');
+                },
+                child: Text('Don’t have an account? Sign up here'),
               ),
             ],
           ),
